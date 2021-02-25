@@ -1,0 +1,17 @@
+{
+  "name": "2021-01-12",
+  "version": "1.0.0",
+  "description": "### Express Server Our express server example does not do much at all. So it's time to change this. In the first step we want to have the following endpoints:",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.7"
+  }
+}

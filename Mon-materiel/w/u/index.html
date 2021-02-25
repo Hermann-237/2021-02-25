@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrap {
+      width: 30%;
+      margin: 20vh 35%;
+    }
+  </style>
+  <body class="bg-info">
+    <div class="wrap">
+      <div class="form-group">
+        <label></label>
+        <input type="text" class="form-control" value="" />
+      </div>
+      <a class="btn btn-primary connect" href="">Connection</a>
+
+      <a type="submit" class="btn btn-danger disconnect m-4" href="">
+        Disconnect
+      </a>
+      <h3 class="text-danger">You are now disconnected</h3>
+    </div>
+    <script></script>
+    <script>
+      let connect = document.querySelector(".connect");
+      let label = document.querySelector("label");
+      let input = document.querySelector("input");
+      let disconnect = document.querySelector(".disconnect");
+      let h3 = document.querySelector("h3");
+      let getName = localStorage.getItem("name");
+      let getTime = localStorage.getItem("time");
+      let valeur = 1;
+      if (localStorage.getItem("name") == null) {
+        label.innerHTML = "Please enter your name below";
+      } else {
+        label.innerHTML = `Good morning ${localStorage.getItem("name")}`;
+      }
+      connect.addEventListener("click", function () {
+        if (input.value == "") {
+          alert("Please enter your name");
+        } else {
+          localStorage.setItem("name", input.value);
+          connect.setAttribute("href", "connexion.html");
+        }
+      });
+
+      /* disconnect.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+      }); */
+    </script>
+  </body>
+</html>

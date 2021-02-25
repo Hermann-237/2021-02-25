@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script
+      src="https://kit.fontawesome.com/3c09bcb51a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product page</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-primary mb-5">All products</h1>
+        <form class="form-inline mb-5 float-right"  method="POST" action="/singlepage" >
+            <input class="form-control mr-sm-2" type="search" name="seach" placeholder="Seach Product">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Product By article number</button>
+          </form>
+          <table class="table table-striped">
+            <thead>
+                <tr class="text-primary">
+                    <th>Article's number</th>
+                    <th>Article's name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) { %>
+                <tr>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].articleNo %></td>
+                    <td class="text-primary">$ <%= data[i].price %></td>
+                </tr>
+              <% } %> 
+            </tbody>
+        </table>
+    </div>
+
+   
+      
+      
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="nom">Bonjour</h1>
+    <ul id="one">
+      <div>simo</div>
+      <li class="two">un</li>
+      <li class="two">deux</li>
+      <li class="two">trois</li>
+    </ul>
+
+    <script>
+      let a = document.querySelector("body");
+      a.innerHTML += "<h2 style = color:red>Je suis la fin du document</h2>";
+      console.log(a);
+
+      /* let a = document.querySelector("#nom");
+      console.log(a.innerHTML); */
+
+      //a.textContent = a.textContent + " " + b;
+
+      // getElementById
+      /* 
+        c'est un systheme qui nous permet d'acceder au id dans un html par example dans notre je peux faire xa :
+        
+        let monId = document.getElementById("one");
+        ici si je fais un console.log(monId) tu verras que tous le contenu de mon ul se trouve dans le resultat et ensuite je peux faire de xa ce que je veux
+
+        // getElementByClassName
+        cette methode nous permet d'acceder a toute les class dans note code et le met dans un array par example:
+        
+        let maClass = document.getElementByClassName("two");
+        si je fais un console.log(maClass) tu verras que toutes les differentes classes vont se retrouver dans un array donc: [li,li,li], ensuite tu peux acceder a toutes les items en utilisans un for loop , tu peux aussi acceder en utilisans un forEach comme ceci :
+        maClass.forEach(el=> console.log(el)); 
+
+        //querySelector & querySelectorAll
+        ici on groupe les elements a partir de leur selecteur comme on l'a vu en css, par example :
+        let qOne = document.querySelector("#one");
+        console.log(qOne); j'aurais la meme reponse que console.log(monId),
+        deuxieme example supposons tu veux selectionner le deuxieme "li" dans ton document html tu peux aussi faire ceci:
+        let deuxiemeLi = document.querySelector("li:nth-child(2)");
+        console.log(deuxiemeLi);ceci selectionnera juste le deuxieme "li"
+        de ta page html.
+        maintenant si tu veux selectionner tous les liste "li" de ta page html la tu utilise le querySelectorAll example:
+        let allLi= document.querySelectorAll("li");
+        console.log(allLi); tu auras tou les listes de "li" dans un array comme le console.log(maClass). et tu tu fais juste:
+        let a = document.querySelector("li");
+        console.log(a); ici tu obtiendras juste le premier element "li" de la page html
+        
+
+      // CHANGE THE TEXT INSIDE THE HTML
+    une fois que tu as recupere le contenu soit par la methode getElementById soit par getElementBysClassName soit par le querySelector, tu peux modifier le contenu de tous les element soit en utilisant le forEach soit en utilisant le forLoop example:
+    let a = document.querySelectorAll(".two");
+    for(let i = 0; i < a.length; i++){
+        a[i].textContent = "bonjour";
+    } tous les texts dans nos differents list seront remplaser par "bonjour", tu peux aussi ajouter un text example :
+    let a = document.querySelectorAll(".two");
+    for(let i = 0; i < a.length; i++){
+        a[i].textContent += "bonjour";
+    }
+    
+    // DIFFERENCE ENTRE innerHTML AND textContent
+
+    la difference est avec textContent tu peux selectionner juste les text alors que avec le innerHTML tu selectionne le text et les balise "<p>"
+    par example : 
+    let a = document.querySelector("#one");
+      console.log(a.innerHTML);
+      tu peux aussi ajouter une balise en html en html en utilisans xa :
+       let a = document.querySelector("body");
+      a.innerHTML = a.innerHTML" + <h2 style = color:red>Je suis la fin du document</h2>"; 
+      
+                               ou 
+
+
+       let a = document.querySelector("body");
+      a.innerHTML += "<h2 style = color:red>Je suis la fin du document</h2>";
+      console.log(a);
+        */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Product page</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-primary mb-5">Please add a product name</h1>
+    <form  action="/addProduct" method="POST" id="form">
+        <div class="form-group">
+          <label for="articleNo">Article number</label>
+          <input type="text" class="form-control" id="articleNo" name="articleNo"  placeholder="Article's name">
+        </div>
+        <div class="form-group">
+          <label for="name">Product's name</label>
+          <input type="text" class="form-control" id="name" name="name"  placeholder=" Product's name">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" name="description"  placeholder="Description">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" id="price" name="price"  placeholder="Price">
+        </div>
+      <span class="text-danger my-5 " id="resp"></span><br>
+
+        <button type="submit" class="btn btn-primary mt-2">Add Product name</button>
+        <a href="/product" class="btn btn-danger mt-2">See all list product</a>
+      </form>
+    </div>
+
+    <script>
+      const articleNo = document.getElementById("articleNo");
+      const name = document.getElementById("name");
+      const description = document.getElementById("description");
+      const price = document.getElementById("price");
+      const resp = document.getElementById("resp");
+      const form = document.getElementById('form')
+      form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        if(articleNo.value == "") resp.innerHTML ="fill the article Number"
+        else if(name.value == "") resp.innerHTML ="fill the Product name"
+        else if(description.value == "") resp.innerHTML ="fill the Description"
+        else if(price.value == "") resp.innerHTML ="fill the Price"
+        else form.submit()
+        
+      })
+    </script>
+</body>
+</html>

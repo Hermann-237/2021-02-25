@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <title>Document</title>
+  </head>
+  <style>
+    .col {
+      color: blue;
+    }
+  </style>
+  <body>
+    <h1>Bienvenue en Allemagne</h1>
+    <p class="one">This is my first paragraph</p>
+    <p class="two">This is my second paragraph</p>
+    <span></span>
+    <script>
+      $("document").ready(function () {
+        $(".one").on({
+          mousedown: function () {
+            $("span").text("Vous avez appuier la souris");
+            $("span").removeClass("col");
+          },
+          mouseup: function () {
+            $("span").text("Vous avez relacher la souris");
+            $("span").addClass("col");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

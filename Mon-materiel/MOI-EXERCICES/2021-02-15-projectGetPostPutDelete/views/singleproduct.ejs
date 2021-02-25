@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script
+      src="https://kit.fontawesome.com/3c09bcb51a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product page</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-primary mb-5">Please add a product name</h1>
+        <a href="/addProduct" class="btn btn-warning my-2">Add Product name</a>
+        <a href="/product" class="btn btn-danger my-2 ">See all list product</a>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Article's number</th>
+                    <th>Article's name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><%= data.name %></td>
+                    <td><%= data.articleNo %></td>
+                    <td>$ <%= data.price %></td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
